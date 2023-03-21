@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/68d9ef9e6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/navBar.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triba</title>
+    <link rel="icon" href="../SLIKE/caret-up-square.svg">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid pl-3 pr-3">
+            <a class="navbar-brand" href="#">Triba</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Nova igra</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html">12x10</a></li>
+                            <li><a class="dropdown-item" href="#">6x5</a></li>
+                            <li><a class="dropdown-item" href="canvas18x15.html">18x15</a></li>
+                            <li><a class="dropdown-item" href="canvasPiramida.html">Piramida</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="upute">Upute</a>
+                        <div id="uputeModal" class="modal">
+                            <div class="modal-content">
+                                <div class="row">
+                                    <div class="container-fluid col-sm-11">
+                                        <p class="col-sm-11 text-center pl-5">
+                                        <h5><b>Upute</b></h5>
+                                        </p>
+                                        <p style="text-align: justify;"> Igrica se sastoji od mreže m×n tačaka, gdje su
+                                            m i n parni prirodni brojevi.
+                                            Dva igrača igraju naizmjenično.Svaki igrač u svom potezu bira trougao tako
+                                            što izabere
+                                            tri tačke iz mreže koje ne leže na istoj pravoj. Trouglovi se ne smiju
+                                            sjeći, te ne smiju
+                                            dva trougla imati zajednički vrh. Trouglovi se mogu nalaziti jedan unutar
+                                            drugog. Igra je
+                                            završena kada jedan igrač ostane bez poteza. Igrač koji je ostao bez poteza
+                                            gubi. Bočne linije
+                                            predstavljaju boju igrača koji je na potezu.</p>
+                                    </div>
+                                    <span class="close col-sm-1">&times;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            O projektu</a>
+                        <ul class="dropdown-menu pl-3 pb-3 pr-3">
+                            <li><a class="dropdown-item1" href="#">
+                                    <span><b>Predmet:</b> Web Programiranje</span>
+                                    <ul>
+                                        <li><b>Profesor:</b> Elmedin Selmanović</li>
+                                        <li><b>Asistent:</b> Iman Bekkaye</li>
+                                    </ul>
+                                </a>
+                            <li><a class="dropdown-item1" href="#">
+                                    <span><b>Studij:</b> Informacione Tehnologije</span>
+                                </a>
+                            <li><a class="dropdown-item1" href="#">
+                                    <span><b>Faklutet:</b> Prirodno-matematički</span>
+                                </a>
+                            <li><a class="dropdown-item1" href="#">
+                                    <span><b>Naziv projekta:</b> Triba</span>
+                                </a>
+                            <li><a class="dropdown-item1" href="#">
+                                    <span><b>Podaci o autoru:</b></span>
+                                    <ul>
+                                        <li>Amar Osmanović</li>
+                                        <li><b>Email:</b> amar.osmanovic07@gmail.com</li>
+                                    </ul>
+                                </a>
+
+
+
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 pr-5" type="Search" placeholder="Pretražuj..." aria-label="Search">
+                    <button class="btn btn-outline" type="submit">Traži</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="row" id="zaglavlje">
+        <div class="col-sm-4"></div>
+        <h3 class="col-sm-1 text-right" id="rezIgrac1">0</h3>
+        <h3 class="col-sm-2 text-center">-</h3>
+        <h3 class="col-sm-1 text-left" id="rezIgrac2">0</h3>
+        <div class="col-sm-4"></div>
+    </div>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1 pt-3 pb-5 pr-3">
+                    <div class="text-center" id="igrac1"></div>
+                </div>
+
+                <div class="col-md-10 pr-5 pl-5 pt-3 pb-5" style="background-color: var(--background-color); ">
+                    <canvas id="canvas6x5"></canvas>
+                </div>
+                <div class="col-md-1 pt-3 pb-5 pl-3">
+                    <div class="text-center" id="igrac2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-2 text-center" id="podnozje">
+            <button disabled type="button" class="btn btn-success pr-5 pl-5 mr-4" id="restart"
+                onClick="window.location.reload();">Restart</button>
+            <button disabled type="button" class="btn btn-success pr-5 pl-5 ml-4" id="zavrsi">Završi</button>
+            <div id="modalPobjednik" class="modal ">
+                <div class="modalPobjednik-content rounded-2" id="modalP">
+                    <div class="row" style="background-color: inherit;">
+                        <div class="container-fluid col-sm-11 rounded" style="height: min-content;">
+                            <p class="col-sm-11 text-center pl-5">
+                            <h3><b>Pobjednik</b></h3>
+                            </p>
+                            <p class="text-center pt-4" id="tekstPobjednik"></p>
+                        </div>
+                        <span class="close1 col-sm-1">&times;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <br>
+    <br>
+    <footer class="text-center text-white mt-5" style="background-color: var(--navBar-color);">
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/Amchiiio"
+                    role="button"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/AmarOsmanovi2"
+                    role="button"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/amchiio/"
+                    role="button"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/amar-osmanovic/"
+                    role="button"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/AmarOsmanovic"
+                    role="button"><i class="fab fa-github"></i></a>
+            </section>
+        </div>
+        <div class="container bottom_border bg-light" style="height: 1px;"></div>
+        <div class="text-center p-3" style="background-color: var(--navBar-color)">
+            © 2020 Copyright:
+            <a class="text-white" href="#">Amar Osmanović</a>
+        </div>
+    </footer>
+
+</body>
+<script type="text/javascript" src="../JavaScript/uputeModal.js"></script>
+<script type="text/javascript" src="../JavaScript/6x5.js"></script>
+<script type="text/javascript" src="../JavaScript/tackeUTrouglu.js"></script>
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+</html>

@@ -1,0 +1,134 @@
+:root {
+    --background-color: #222222;
+    --navBar-color: #121212;
+    --bottom-gradient: #282828;
+    --top-gradient: #404040;
+    --primary-text: #ffffff;
+    --secondary-text: #b3b3b3;
+    --canvasCircle-color: #808080;
+    --canvasConnectedCircle-color-igrac1: #B82C2C;
+    --canvasConnectedCircle-color-igrac2: #47D3D3;
+    --canvasTriangle-color-igrac1: #B82C2C;
+    --canvasTriangle-color-igrac2: #47D3D3;
+
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+main,
+main .container-fluid {
+    height: 90vh;
+}
+
+#zaglavlje {
+    height: 60px;
+    width: 100%;
+    margin: 0;
+    font-size: 25px;
+    padding-top: 1%;
+    color: var(--primary-text);
+    cursor: default;
+}
+
+#poruka {
+    font-size: 22px;
+}
+
+#rezIgrac1 {
+    color: var(--canvasConnectedCircle-color-igrac1);
+}
+
+#rezIgrac2 {
+    color: var(--canvasConnectedCircle-color-igrac2);
+}
+
+main .row {
+    background-color: var(--background-color);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+main .row #igrac1,
+main .row #igrac2 {
+    height: 100%;
+    line-height: 90vh;
+}
+
+main .row #igrac1 {
+    background-color: var(--background-color);
+    padding: 0px 0px 0px 0px;
+    border-right: 10px solid var(--canvasConnectedCircle-color-igrac1);
+}
+
+main .row #igrac2 {
+    background-color: var(--background-color);
+    padding: 0px 0px 0px 0px;
+    border-left: 10px solid var(--canvasConnectedCircle-color-igrac2);
+}
+
+canvas {
+    background-color: var(--background-color);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+#podnozje button {
+    background-color: var(--secondary-text);
+    color: var(--navBar-color);
+    border: none;
+}
+
+#podnozje button:hover {
+    background-color: var(--primary-text);
+}
+
+#podnozje button:focus {
+    box-shadow: none;
+}
+
+#podnozje button:disabled {
+    pointer-events: auto;
+    cursor: not-allowed;
+}
+
+#modalPobjednik {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 330px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: transparent;
+}
+
+.modalPobjednik-content {
+    background-color: var(--top-gradient);
+    opacity: 0.9;
+    color: var(--primary-text);
+    margin: auto;
+    padding: 10px 10px 20px 20px;
+    width: 80%;
+    height: 40%;
+}
+
+.close {
+    color: var(--primary-text);
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0px;
+    padding-left: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+}
